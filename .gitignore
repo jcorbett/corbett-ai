@@ -1,0 +1,22 @@
+# Ignore generated site files
+_site
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ignore Bundler config
+.bundle
+
+# Ignore Ruby gems
+vendor/
+Gemfile.lock
+
+# Ignore temporary and backup files
+*.swp
+*.tmp
+*.bak
+*.old
+*.DS_Store
+
+# Ignore log files and debug output
+.log
