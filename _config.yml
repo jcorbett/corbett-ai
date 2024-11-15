@@ -20,18 +20,18 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Starter Kit
+title:                 Justin Corbett
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
-  with a focus on personal sites that are meant to impress.
+  The personal website of Justin Corbett. This exists to showcase some of the 
+  projects, failures, and writings I've created.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               never satisfied.
 
-# A list of keywords for your blog
+# A list o keywords for your blog
 keywords:              []
 
 # A (square) logo for your site.
@@ -42,16 +42,17 @@ logo:                  /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                <firstname> <lastname>
-  email:               <mail@domain.tld>
+  name:                Justin Corbett
+  email:               justin@corbett.ai
   # # Used by `jekyll-seo-tag`:
-  # twitter:             <username>
+  twitter:             _ustin
+  github:              jcorbett
 
 # Add links to the sidebar.
 menu:
-  - title:             Example
+  - title:             Projects
     url:               /example/
-  - title:             Documentation
+  - title:             Words
     url:               /docs/
   - title:             About
     url:               /about/
@@ -350,8 +351,8 @@ plugins:
 #   yandex:              <verification-id>
 
 # Used for twitter cards
-# twitter:
-#   username:            <username>
+twitter:
+  username:            _ustin
 
 # Used for facebook open graph
 # facebook:
@@ -360,11 +361,11 @@ plugins:
 #   admins:              <id>
 
 # Used on index and about sites
-# social:
-#   name:                <firstname> <lastname>
-#   links:
-#     - https://twitter.com/<username>
-#     - https://github.com/<username>
+social:
+  name:                Justin Corbett
+  links:
+    - https://twitter.com/_ustin
+    - https://github.com/jcorbett
 
 
 # Plugin Configs
