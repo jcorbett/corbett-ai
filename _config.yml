@@ -51,11 +51,11 @@ author:
 # Add links to the sidebar.
 menu:
   - title:             Projects
-    url:               /example/
-  - title:             Words
-    url:               /docs/
-  - title:             About
-    url:               /about/
+    url:               /projects/
+  - title:             Blog
+    url:               /blog/
+  # - title:             About
+  #   url:               /about/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -127,7 +127,7 @@ defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
   - scope:
-      path:            hyde/
+      path:            justin/
     values:
       accent_color:    rgb(38,139,210)
       theme_color:     rgb(32,32,32)
