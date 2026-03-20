@@ -1,0 +1,5 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'>
+  <!-- Home plate: flat top, vertical sides, 45° angled bottom to point -->
+  <path d='M5 4 L27 4 L27 19 L16 30 L5 19 Z' fill='#D4A017' stroke='#a67c00' stroke-width='1.5' stroke-linejoin='miter'/>
+  <path d='M9 8 L23 8 L23 18 L16 25 L9 18 Z' fill='#ffe066' opacity='0.55'/>
+</svg>
