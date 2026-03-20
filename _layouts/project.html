@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="page-wrap">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {% if page.description %}
+  <p style="color: var(--text-normal); font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.6;">{{ page.description }}</p>
+  {% endif %}
+  {% if page.links %}
+  <ul class="project-links">
+    {% for link in page.links %}
+    <li><a href="{{ link.url }}" rel="noopener noreferrer" target="_blank">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <div class="page-content" style="margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+    {{ content }}
+  </div>
+</div>

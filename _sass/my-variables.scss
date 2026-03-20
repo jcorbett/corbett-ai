@@ -1,1 +1,19 @@
-// This is deprecated. Modify CSS Custom Properties instead.
+:root {
+  --body-bg:       #ffffff;
+  --text-dark:     #15171A;
+  --text-normal:   #424447;
+  --text-light:    #a1a1a1;
+  --border:        #E8E9EB;
+  --light-bg:      #f0f2f7;
+  --accent:        #FF005C;
+  --shadow:        0 4px 32px rgba(0, 0, 0, 0.10);
+  --shadow-lg:     0 8px 48px rgba(0, 0, 0, 0.13);
+
+  --font-body:     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-display:  'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-mono:     ui-monospace, 'SF Mono', Menlo, Monaco, Consolas, monospace;
+
+  --transition:    0.25s;
+  --max-width:     1200px;
+}
+

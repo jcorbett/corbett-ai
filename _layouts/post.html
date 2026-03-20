@@ -1,41 +1,50 @@
 ---
-# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-layout: base
+layout: default
 ---
+{% assign words = content | number_of_words %}
+{% assign read_time = words | divided_by: 200 | plus: 1 %}
+<div class="post-wrap">
+  <article>
+    <header class="post-header">
+      {% if page.tags.size > 0 %}
+      <ul class="post-tags">
+        {% for tag in page.tags %}
+        <li>{{ tag }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <h1 class="post-title">{{ page.title }}</h1>
+      <div class="post-meta">
+        <img class="post-meta__avatar" src="{{ site.logo | default: '/assets/img/logo.png' | relative_url }}" alt="{{ site.author.name }}">
+        <span>{{ read_time }} min read</span>
+        <span class="post-meta__sep">·</span>
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        <span class="post-meta__sep">·</span>
+        <span class="post-item__badge">Free</span>
+      </div>
+    </header>
 
-{% assign version = jekyll.version | split:'.' %}
-{% assign major = version[0] | plus:0 %}
-{% assign minor = version[1] | plus:0 %}
-{% assign patch = version[2] | plus:0 %}
+    {% if page.image %}
+    <img class="post-hero" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+    {% endif %}
 
-{% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
+    <div class="post-content">
+      {{ content }}
+    </div>
 
-{% include components/dingbat.html %}
-
-{% assign addons = page.addons | default:site.hydejack.post_addons %}
-{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
-{% for addon in addons %}
-  {% case addon %}
-  {% when 'about' %}
-     {% include_cached components/about.html author=page.author %}
-  {% when 'related' %}
-    {% include if-non-null try="components/related-posts.html" %}
-  {% when 'comments' %}
-    {% include body/comments.html %}
-  {% else %}
-  {% endcase %}
-{% endfor %}
+    <nav class="post-nav">
+      {% if page.previous.url %}
+      <a class="post-nav__link" href="{{ page.previous.url | relative_url }}">
+        <span class="post-nav__label">← Previous</span>
+        <span class="post-nav__title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+      {% if page.next.url %}
+      <a class="post-nav__link post-nav__next" href="{{ page.next.url | relative_url }}">
+        <span class="post-nav__label">Next →</span>
+        <span class="post-nav__title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </nav>
+  </article>
+</div>
